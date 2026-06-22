@@ -1,0 +1,16 @@
+{
+  "name": "My PWA App",
+  "short_name": "PWA App",
+  "description": "An installable Progressive Web App.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "icons": [
+    {
+      "src": "https://www.w3.org/TR/appmanifest/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

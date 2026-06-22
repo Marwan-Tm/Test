@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My PWA App</title>
+  <meta name="description" content="An installable Progressive Web App.">
+  <meta name="theme-color" content="#007bff">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/pwa-compat@2.0.17/pwa-compat.min.js" as="script">
+</head>
+<body>
+<div class="container">
+  <h1>Welcome to PWA Studio!</h1>
+  <p>Edit HTML, CSS, and JS to build your app.</p>
+  <button id="clickMe">Click Me!</button>
+</div>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('Service Worker registered', reg))
+          .catch(err => console.error('Service Worker registration failed', err));
+      });
+    }
+  </script>
+</body>
+</html>
